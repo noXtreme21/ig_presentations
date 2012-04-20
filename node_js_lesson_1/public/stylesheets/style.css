@@ -1,0 +1,50 @@
+html, body {
+	position: relative;
+	top: 0; left: 0;
+	
+	width: 100%;
+	height: 100%;
+	
+	margin: 0;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.browser {
+	position: relative;
+	left: 0; top: 0;
+	
+	width: 960px;
+	height: 400px;
+	
+	overflow: hidden;
+}
+
+#controller {
+	position: absolute;
+	left: 0; top: 0;
+	
+	background-color: #222;
+	width: 100%;
+	height: 100%;
+}
+
+#touch {
+	position: absolute;
+	left: 0; top: 0;
+	
+	background-color: #fff;
+	
+	width: 150px;
+	height: 150px;
+	
+	-webkit-border-radius: 75px;
+	
+	display: none;
+}
