@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    div.navbar.navbar-fixed-top
+        div.navbar-inner
+            div.container
+                a.brand(href='#') Node.js Presentation
+
+    div.marginHelper.visible-desktop
+
+    div.container
+        div.row
+            div.span6
+                div.page-header
+                    h1 Statistics 
+                        small of Transactions.
+                div.well
+                    form.form-horizontal
+                        fieldset
+                            div.control-group
+                                label.control-label amount
+                                div.controls
+                                    label#amount.checkbox= sum.amount * 1 + ' Gold'
+                            div.control-group
+                                label.control-label price
+                                div.controls
+                                    label#price.checkbox= (sum.price / 100).toFixed(2) + ' €'
+
+            div.span6
+                div.page-header
+                    h1 Transactions 
+                        small a list of the last 10 transactions.
+                table.table.table-striped.table-bordered
+                    thead
+                        tr
+                            td id
+                            td amount
+                            td price
+                            td provider
+                    tbody
+                      - transactions.forEach(function(transaction) {
+                            tr
+                                td= transaction.id
+                                td= transaction.amount
+                                td= (transaction.price / 100).toFixed(2) + ' €'
+                                td= transaction.provider
+                      - })

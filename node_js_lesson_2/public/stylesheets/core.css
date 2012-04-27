@@ -1,0 +1,23 @@
+.marginHelper {
+	width: 100%;
+	height: 50px;
+}
+
+#amount, #price {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.animate {
+	-webkit-animation: animate 0.4s ease-in-out 1;
+}
+
+@-webkit-keyframes animate {
+	from {
+		color: #000;
+	}
+	to {
+		color: #0a0;
+	}
+}
+

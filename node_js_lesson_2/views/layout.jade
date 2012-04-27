@@ -1,0 +1,27 @@
+!!!
+html
+    head
+        title= title
+
+        block meta
+            meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
+            meta(name='apple-mobile-web-app-capable', content='yes')
+            meta(name='apple-touch-fullscreen', content='yes')
+            meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+
+        block link
+            link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+            link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min.css')
+            link(rel='stylesheet', href='/stylesheets/core.css')
+
+        block script
+            script(src='/socket.io/socket.io.js')
+            script(src='/javascripts/jquery-1.7.2.min.js')
+            script(src='/javascripts/bootstrap.min.js')
+            script(src='/javascripts/core.js')
+
+            script
+                socket = io.connect('http://' + location.hostname);
+
+    body
+        block content

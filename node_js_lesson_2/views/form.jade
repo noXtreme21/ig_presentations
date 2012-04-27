@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    div.navbar.navbar-fixed-top
+        div.navbar-inner
+            div.container
+                a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+
+                a.brand(href='#') Node.js Presentation
+
+                div.nav-collapse
+                    ul.nav
+                        li: a(href='/') Dashboard
+                        li.active: a(href='/form') Form
+
+    div.container
+        div.row
+            div.span12
+                div.hero-unit
+                    h1 Dashboard
+                    p Transaction overview.
+        div.row
+            div.span8
+                div.page-header
+                    h1 Transactions 
+                        small A list of the last transactions.
+                form.form-horizontal
+                    fieldset
+                        div.control-group
+                            label.control-label Text input
+                            div.controls
+                                input.input-large(type='text')
+                                p.help-block jojojojo
